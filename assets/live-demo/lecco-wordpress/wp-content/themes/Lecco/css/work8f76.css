@@ -1,0 +1,570 @@
+/*	-----------------------------------------------------   /*
+	EXPAND EFFECT 
+		- MAIN STYLE
+/*	-----------------------------------------------------   */
+
+/* SuperBox */
+.superbox {
+	margin-top: 30px;
+	display: inline-block;
+}
+
+.superbox-list {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	width:24%;
+	height: 100%;
+	margin: 0.5%;
+	position: relative;
+}
+.superbox-list.dis-2 {
+	width: 49%;
+}
+.superbox-img {
+	max-width:100%;
+	width:100%;
+	cursor:pointer;
+}
+.superbox-show {
+	text-align:center;
+	position:relative;
+	width:90%;
+    float:left;
+	padding:5%;
+	display:none;
+}
+.superbox-current-img {
+	max-width:100%;
+}
+
+.superbox-title {
+	margin-top: 50px;
+	text-align: left;
+}
+.superbox-title h2 {
+	color: #fff;
+}
+
+.hover-expand-work {
+	display: none;
+	width: 100%;height: 101%;
+	position: absolute;top: 0;left: 0;
+	background-image: url('../images/hover-work.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.hover-expand-eye {
+	width: 50%;height: 50%;
+	position: absolute;top: 0;left: 0;
+	padding-top: 50%;
+	padding-left: 50%;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+.hover-expand-eye img {
+	width: 70px;height: 70px;
+	margin-top: -35px;
+	margin-left: -35px;
+	display: none;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.superbox-list:hover .hover-expand-work {
+	opacity: 1;
+}
+.superbox-list:hover .hover-expand-eye img {
+	display: block;
+	opacity: 0.5;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+.superbox-list .hover-expand-eye img:hover {
+	opacity: 1;
+	width: 78px;height: 78px;
+	margin-top: -39px;
+	margin-left: -39px;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+
+.superbox-float {
+	float:left;
+}
+.superbox-close {
+	opacity:1;
+	cursor:pointer;
+	position:absolute;
+	top:25px;
+	right:25px;
+	background:url(../images/close.gif) no-repeat center center;
+	width:35px;
+	height:35px;
+}
+
+@media only screen and (max-width: 768px) {
+	.superbox-list {
+		width:49%;
+	}
+	.superbox-list.dis-2 {
+		width: 99%;
+	}
+	.superbox-close {
+	background:url(../images/phones/close.png) no-repeat center center;
+}
+}
+
+/*	-----------------------------------------------------   /*
+	 OVERLAY EFFECT
+		- MAIN STYLE
+/*	-----------------------------------------------------   */
+
+.rb-grid {
+	list-style: none;
+	text-align: center;
+	margin: 0 auto;
+	height: 100%;
+	padding: 100px 0 100px 0;
+}
+.rb-grid:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.rb-grid li {
+	width: 24%;
+	height: 0;
+	padding-top: 25%;
+	padding: 0.5%;
+	margin: 0.5%;
+	text-align: left;
+	color: #fff;
+	display: block;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+.rb-grid li:hover {
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.rb-grid li.rb-span-2 {
+	width: 49%;
+	padding-top: 50%;	
+}
+
+.rb-grid li.rb-span-3 {
+	width: 32.33%;
+	padding-top: 33.33%;	
+}
+
+.rb-grid li.rb-span-4 {
+	width: 24%;
+	padding-top: 25%;
+}
+
+.rb-grid li h3 {
+	font-size: 2.6em;
+	font-weight: 100;
+}
+
+.rb-grid li[class^="icon-"]:before,
+.rb-grid li[class*=" icon-"]:before {
+	font-size: 10em;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	line-height: 3;
+	opacity: 0.4;
+	text-align: right;
+	pointer-events: none;
+}
+
+.hover-work {
+	width: 100%;height: 100%;
+	position: absolute;top: 0;left: 0;
+	background-image: url('../images/hover-work.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	opacity: 0;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.hover-work-eye {
+	width: 50%;height: 50%;
+	position: absolute;top: 0;left: 0;
+	padding-top: 50%;
+	padding-left: 50%;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+.hover-work-eye img {
+	width: 70px;height: 70px;
+	margin-top: -35px;
+	margin-left: -35px;
+	display: none;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.rb-grid li[class^="icon-"]:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.rb-grid li[class^="icon-"]:hover .hover-work {
+	display: none;
+}
+.rb-grid li[class^="icon-"]:hover .hover-work-eye img {
+	display: none;
+	opacity: 0.5;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+.rb-grid li[class^="icon-"] .hover-work-eye img:hover {
+	opacity: 1;
+	width: 78px;height: 78px;
+	margin-top: -39px;
+	margin-left: -39px;
+	-webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease;
+}
+
+.rb-overlay-container {
+	width: 100%;height: 100%;
+	position: fixed;top: 0;left: 0;
+	display: none;
+	background-color: #fff;
+}
+.rb-overlay {
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	display: none;
+	-webkit-transition: all .35s ease;
+	   -moz-transition: all .35s ease;
+	    -ms-transition: all .35s ease;
+	     -o-transition: all .35s ease;
+	        transition: all .35s ease;
+}
+.rb-overlay.anim {
+	-webkit-transform: scale(0.8);
+	   -moz-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	     -o-transform: scale(0.8);
+	        transform: scale(0.8);
+}
+
+.rb-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 2em;
+	height: 2em;
+	text-indent: -9000px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.rb-close::before {
+	content: 'x';
+	font-weight: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 3em;
+	line-height: 0.6;
+	text-align: center;
+	text-indent: 0px;
+}
+
+.rb-fullwork {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+
+	-webkit-transition: all 0.45s ease;
+	   -moz-transition: all 0.45s ease;
+	    -ms-transition: all 0.45s ease;
+	     -o-transition: all 0.45s ease;
+	        transition: all 0.45s ease;
+
+	-webkit-transform: translateY(0%);
+	   -moz-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+	     -o-transform: translateY(0%);
+	        transform: translateY(0%);
+}
+.rb-fullwork.active
+{
+	z-index: 1;
+	opacity: 1;
+}
+.rb-fullwork.anim_1
+{
+	-webkit-transform: translateY(-100%);
+	   -moz-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	     -o-transform: translateY(-100%);
+	        transform: translateY(-100%);
+}
+
+.rb-fullwork.anim_3
+{
+	-webkit-transform: translateY(100%);
+	   -moz-transform: translateY(100%);
+	    -ms-transform: translateY(100%);
+	     -o-transform: translateY(100%);
+	        transform: translateY(100%);
+}
+
+.rb-fullwork > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;left: 0;
+	margin: 0;padding: 0;
+}
+
+.rb-fullwork > div:first-child {
+	width: 100%;
+	height: 100%;
+}
+
+.rb-fullwork span {
+	font-size: 2em;
+	font-weight: 100;
+	display: block;
+	margin: auto 0;
+	height: 100%;
+	width: 100%;
+	line-height: 0.8;
+	overflow: auto;
+}
+.rb-fullwork h2 {
+	color: #fff !important;
+	text-align: left;
+}
+.rb-fullwork span p {
+	color: #fff !important;
+}
+
+.rb-fullwork span.rb-pict {
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.2;
+	text-align: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.rb-fullwork span.rb-pict img {
+	max-width: 80%;
+	max-height: 90%;
+	margin: auto;
+}
+
+.rb-fullwork span.description {
+	width: 60%;height: auto;
+	position: absolute;bottom: 0;left: 0;
+	padding: 50px;
+}
+
+.rb-fullwork [class^="icon-"]:before {
+	font-size: 2.5em;
+	font-weight: normal;
+}
+
+.rb-fullwork > div:first-child [class^="icon-"] {
+	opacity: 0.1;
+}
+
+.nav_lightbox
+{
+	z-index: 2;
+	position: absolute;
+	top:50%;
+	right: 10px;
+	-webkit-transform:translate( 0%,-50%);
+	-ms-transform:translate( 0%,-50%);
+	-o-transform:translate( 0%,-50%);
+	transform:translate( 0%,-50%);
+}
+.top_button, .bottom_button, .close_button
+{
+	height: 60px;
+	width: 60px;
+	background-color: #FFF;
+	border-radius: 60px;
+	margin: 10px;
+	box-shadow:0 2px 4px rgba(0,0,0,0.2);
+	cursor: pointer;
+	position: relative;
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.bottom_button:hover
+{
+	box-shadow:0px 0px 0px rgba(0,0,0,0);
+}
+.bottom_button svg
+{
+	height: 25px;
+	fill: #393939;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.bottom_button:hover svg
+{
+	fill: #FFF;
+}
+.top_button:hover
+{
+	box-shadow:0px 0px 0px rgba(0,0,0,0);
+}
+.top_button svg
+{
+	height: 25px;
+	fill: #393939;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.top_button:hover svg
+{
+	fill: #FFF;
+}
+.close_button
+{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 2;
+}
+.close_button svg
+{
+	height: 15px;
+	fill: #393939;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.close_button:hover
+{
+	box-shadow:0 0px 0px rgba(0,0,0,0);
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+.close_button:hover svg
+{
+	fill: #FFF;
+}
+
+
+/* Colors */
+
+/* Overlay Columns */
+
+@media screen and (max-width: 1030px){
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+.close_button {
+	top: 100px;
+}
+	
+	.rb-grid li, .rb-grid li.rb-span-4, .rb-grid li.rb-span-3 {
+		width: 49%;
+		padding-top: 50%;
+	}
+
+	.rb-grid li.rb-span-2 {
+		width: 100%;
+		padding-top: 100%;
+	}
+	.rb-close {
+		top: 30px;
+		right: 30px;
+		width: 5em;
+		height: 5em;
+	}
+	.rb-close::before {
+	font-size: 6em;
+}
+}
+
+@media screen and (device-height: 568px){
+
+	.rb-overlay {
+		height: 1136px !important;
+	}.rb-fullwork {
+		height: 1136px !important;
+	}
+	.rb-fullwork > div {
+		height: 736px !important;
+	}
+	.rb-fullwork > div:first-child {
+		height: 400px !important;
+	}
+
+}
+

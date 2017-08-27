@@ -1,0 +1,40 @@
+@media screen and (max-width: 1280px) {
+	.product-seller
+	{
+		width: 640px;
+	}
+}
+
+@media screen and (max-width: 675px) {
+	.info-seller p
+	{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.product-seller
+	{
+		width: 100%;
+	}
+	.product-thumb
+	{
+		width: 280px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

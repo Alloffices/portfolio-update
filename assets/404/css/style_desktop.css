@@ -1,0 +1,121 @@
+@font-face {
+  font-family:GOTHAM-MEDIUM;
+  src:url(../fonts/GOTHAM-MEDIUM.html)
+}
+@font-face {
+  font-family:GOTHAM-LIGHT;
+  src:url(../fonts/GOTHAM-LIGHT.html)
+}
+@font-face {
+  font-family:HelveticaNeueLight;
+  src:url(../fonts/HelveticaNeueLight.html)
+}
+@font-face {
+  font-family:MavenProLight-100;
+  src:url(../fonts/MavenProLight-100.html)
+}
+body, html, *
+{
+	padding: 0px;
+	margin: 0px;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*
+	POSITION
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+
+	TEXT
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+*/
+
+/* CONTAINER GENERAL */
+
+#container-general
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+/* END CONTAINER GENERAL */
+
+#container-general .logo
+{
+	fill: #333;
+	width: 33px;
+	display: block;
+	margin: auto;
+}
+
+#container-general img
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 700px;
+}
+#container-general .text
+{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+#container-general .text h1
+{
+	font-family:GOTHAM-LIGHT;
+	font-weight: normal;
+	color: #333;
+	font-size: 64px;
+}
+#container-general .text p
+{
+	font-family:GOTHAM-LIGHT;
+	color: #333;
+	font-size: 24px;
+	max-width: 350px;
+	margin-top: 20px;
+}
+#container-general .text a
+{
+	display: block;
+	text-align: center;
+	font-family:GOTHAM-LIGHT;
+	text-decoration: none;
+	width: 161px;
+	height: 60px;
+	line-height: 60px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	color: #333;
+	font-size: 11px;
+	margin-top: 60px;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+#container-general .text a:hover
+{
+	color: #FFF;
+	background-color: #333;
+}

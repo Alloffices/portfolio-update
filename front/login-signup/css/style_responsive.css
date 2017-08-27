@@ -1,0 +1,58 @@
+@media screen and (max-width: 550px) {
+	
+	#lightbox-log .close
+	{
+		top: 20px;
+		right: 20px;
+	}
+	
+	#lightbox-log > .content
+	{
+		width: 90%;
+	}
+	.container-login .footer, .container-signup .footer
+	{
+		height: auto;
+	}
+	.container-login .footer .create-account, .container-signup .footer .login 
+	{
+		position: relative;
+		top: initial;
+		left: initial;
+		display: block;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	.container-login .footer .login, .container-signup .footer .create-account
+	{
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		position: relative;
+		top: initial;
+		right: initial;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

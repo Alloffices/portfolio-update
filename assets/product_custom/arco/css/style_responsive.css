@@ -1,0 +1,93 @@
+@media screen and (max-width: 1000px) {
+
+	.overlay-thumb, .nav-thumb-open_button, .nav-menu, .background-thumb, .cadre-filter-1, .cadre-filter-2, .loader-bar-left, .loader-bar-middle, .loader-bar-right, .arco-logo, #loader
+	{
+		display: none !important;
+	}
+	.thumb-1, .thumb-2, .thumb-3
+	{
+		display: none;
+	}
+	.thumb-4, .thumb-4.active
+	{
+		z-index: 1;
+		width: 100%;
+		left: 0px;
+		-webkit-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-moz-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-ms-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-o-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-webkit-transition: all ease 0s; 
+		-moz-transition: all ease 0s; 
+		-o-transition: all ease 0s; 
+		transition: all ease 0s;
+	}
+	.thumb-4 .content-thumb
+	{
+		width: 100%;
+		margin-left: 0px;
+		display: block;
+		-webkit-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-moz-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-ms-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		-o-transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+		transform: skew(0deg) translateX(0vw) translate3d(0, 0, 0);
+	}
+	.section-all-screen
+	{
+		padding-top: 200px;
+	}
+	.title-all-screen
+	{
+		width: 60vw;
+	}
+	.container-all-screen
+	{
+		width: 70%;
+	}
+	.container-all-screen img
+	{
+		width: 30%
+	}
+	.container-all-screen video
+	{
+		width: 45%
+	}
+	.container-all-screen .card
+	{
+		display: block;
+		width: auto;
+		margin-bottom: 30px;
+		margin-top: 80px;
+	}
+	.include-features
+	{
+		word-break: break-all;
+		min-width: auto;
+		margin-right: 0px;
+		display: block;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	.container-all-screen img {
+	    width: 48%;
+	}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

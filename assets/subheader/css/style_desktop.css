@@ -1,0 +1,346 @@
+#sub-header
+{
+	position: absolute;
+	height: 70px;
+	top: 52px;
+	left: 0px;
+	z-index: 6;
+	width: 100%;
+	-webkit-transition: background-color .25s ease, box-shadow .25s ease;
+	   -moz-transition: background-color .25s ease, box-shadow .25s ease;
+	    -ms-transition: background-color .25s ease, box-shadow .25s ease;
+	     -o-transition: background-color .25s ease, box-shadow .25s ease;
+	        transition: background-color .25s ease, box-shadow .25s ease;
+}
+#sub-header.fixed
+{
+	top: 0px;
+	position: fixed;
+	background-color: #FFF;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+#sub-header .info
+{
+	position: absolute;
+	font-size: 0px;
+	left: 35px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+#sub-header .info .title
+{
+	color: #333;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#sub-header .info .compatibility
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+#sub-header .info .compatibility svg
+{
+	width: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+#sub-header .action
+{
+	position: absolute;
+	font-size: 0px;
+	right: 35px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+#sub-header .action .free
+{
+	text-decoration: none;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	height: 30px;
+	border: 1px solid #333;
+	border-radius: 3px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 10px 20px 10px 20px;
+	color: #333;
+	font-size: 9px;
+	cursor: pointer;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+#sub-header .action .free:hover
+{
+	background-color: #333;
+	color: #FFF;
+}
+#sub-header .action .buy
+{
+	text-decoration: none;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	margin-left: 10px;
+	text-decoration: none;
+	height: 30px;
+	border: 1px solid #333;
+	background-color: #333;
+	border-radius: 3px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 10px 20px 10px 20px;
+	color: #FFF;
+	font-size: 9px;
+	cursor: pointer;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+#sub-header .action .buy:hover
+{
+	background-color: transparent;
+	color: #333;
+}
+
+
+
+/* ARCO */
+
+#sub-header.sub-header-style-arco-1 .info .title
+{
+	color: #FFF;
+}
+
+#sub-header.sub-header-style-arco-1 .info .compatibility svg
+{
+	fill: #FFF;
+}
+
+#sub-header.sub-header-style-arco-1 .action .free
+{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+#sub-header.sub-header-style-arco-1 .action .free:hover
+{
+	background-color: #FFF;
+	color: #333;
+}
+#sub-header.sub-header-style-arco-1 .action .buy
+{
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	color: #333;
+}
+#sub-header.sub-header-style-arco-1 .action .buy:hover
+{
+	color: #FFF;
+	background-color: transparent;
+}
+
+/* END ARCO */
+
+/* BELLAGICONS */
+
+#sub-header.sub-header-style-bellagicons .info .title
+{
+	color: #FFF;
+}
+
+#sub-header.sub-header-style-bellagicons .info .compatibility svg
+{
+	fill: #FFF;
+}
+
+#sub-header.sub-header-style-bellagicons .action .free
+{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+#sub-header.sub-header-style-bellagicons .action .free:hover
+{
+	background-color: #FFF;
+	color: #333;
+}
+#sub-header.sub-header-style-bellagicons .action .buy
+{
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	color: #333;
+}
+#sub-header.sub-header-style-bellagicons .action .buy:hover
+{
+	color: #FFF;
+	background-color: transparent;
+}
+
+/* END BELLAGICONS */
+
+/* MUSSO */
+
+#sub-header.sub-header-style-musso-presentation-1 .info .title
+{
+	color: #FFF;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .info .title
+{
+	color: #2a2c34;
+}
+
+#sub-header.sub-header-style-musso-presentation-1 .info .compatibility svg
+{
+	fill: #FFF;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .info .compatibility svg
+{
+	fill: #2a2c34;
+}
+#sub-header.sub-header-style-musso-presentation-1 .action .free
+{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .action .free
+{
+	color: #2a2c34;
+	border: 1px solid #2a2c34;
+}
+
+#sub-header.sub-header-style-musso-presentation-1 .action .free:hover
+{
+	background-color: #FFF;
+	color: #2a2c34;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .action .free:hover
+{
+	background-color: #2a2c34;
+	color: #FFF;
+}
+#sub-header.sub-header-style-musso-presentation-1 .action .buy
+{
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	color: #2a2c34;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .action .buy
+{
+	border: 1px solid #2a2c34;
+	background-color: #2a2c34;
+	color: #FFF;
+}
+#sub-header.sub-header-style-musso-presentation-1 .action .buy:hover
+{
+	color: #FFF;
+	background-color: transparent;
+}
+#sub-header.fixed.sub-header-style-musso-presentation-1 .action .buy:hover
+{
+	color: #2a2c34;
+
+}
+
+/* END MUSSO */
+
+/* COLICONS */
+
+#sub-header.sub-header-style-colicons-set-of-300-icons .info .title
+{
+	color: #FFF;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .info .title
+{
+	color: #2a2c34;
+}
+
+#sub-header.sub-header-style-colicons-set-of-300-icons .info .compatibility svg
+{
+	fill: #FFF;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .info .compatibility svg
+{
+	fill: #2a2c34;
+}
+#sub-header.sub-header-style-colicons-set-of-300-icons .action .free
+{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .action .free
+{
+	color: #2a2c34;
+	border: 1px solid #2a2c34;
+}
+
+#sub-header.sub-header-style-colicons-set-of-300-icons .action .free:hover
+{
+	background-color: #FFF;
+	color: #2a2c34;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .action .free:hover
+{
+	background-color: #2a2c34;
+	color: #FFF;
+}
+#sub-header.sub-header-style-colicons-set-of-300-icons .action .buy
+{
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	color: #2a2c34;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .action .buy
+{
+	border: 1px solid #2a2c34;
+	background-color: #2a2c34;
+	color: #FFF;
+}
+#sub-header.sub-header-style-colicons-set-of-300-icons .action .buy:hover
+{
+	color: #FFF;
+	background-color: transparent;
+}
+#sub-header.fixed.sub-header-style-colicons-set-of-300-icons .action .buy:hover
+{
+	color: #2a2c34;
+
+}
+
+/* END COLICONS */
+
+/* LENNO */
+
+#sub-header.sub-header-style-lenno .info .compatibility svg
+{
+	fill: #333;
+}
+
+#sub-header.sub-header-style-lenno .action .buy
+{
+	color: #FFF;
+	background-color: #82DB33;
+	border-color: #82DB33;
+}
+#sub-header.sub-header-style-lenno .action .buy:hover
+{
+	color: #82DB33;
+	background-color: transparent;
+}
+
+
+/* END LENNO */

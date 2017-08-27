@@ -1,0 +1,21 @@
+@media screen and (max-width: 890px) {
+	#header-action
+	{
+		display: none;
+	}
+
+	#header-mobile, #link-header-mobile
+	{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 675px) {
+.product-thumb
+	{
+		width: 280px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

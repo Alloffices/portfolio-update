@@ -1,0 +1,106 @@
+footer
+{
+  width: 100%;
+  padding-bottom: 40px;
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+  clear: both;
+}
+footer > *
+{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+footer .logo
+{
+  display: inline-block;
+  vertical-align: top;
+}
+footer .logo svg
+{
+  height: 40px;
+}
+footer ul
+{
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+footer ul li
+{
+  font-family:HelveticaNeueLight;
+  -webkit-font-smoothing: antialiased;
+  color: #777;
+  font-size: 12px;
+  line-height: 18px;
+}
+footer ul li a
+{
+  text-decoration: none;
+  color: #777;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+footer ul li a:hover
+{
+  color: #333;
+}
+footer ul li:nth-child(1)
+{
+  font-family: GOTHAM-MEDIUM;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+footer ul.footer-follow li
+{
+  padding-left: 18px;
+  position: relative;
+}
+footer ul.footer-follow li:nth-child(1)
+{
+  padding-left: 0px;
+}
+footer ul.footer-follow li svg
+{
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+footer ul.footer-seller li:nth-child(1)
+{
+  color: #5064f1;
+  font-size: 13px;
+}
+footer:after
+{
+  content: '© 2016 MARKETME, INC.';
+  color: #777;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 9px;
+  font-family:HelveticaNeueLight;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  border-top: 1px solid #D4D4D4;
+}

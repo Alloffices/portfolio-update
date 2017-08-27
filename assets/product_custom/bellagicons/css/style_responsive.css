@@ -1,0 +1,197 @@
+@media screen and (max-width: 1000px) {
+	#loader
+	{
+		display: none;
+	}
+	#background-general-1, #background-general-2, #background-general-3, #background-general-4, #wave, #wave-background-unlock, #unlock, #navigation, #navigation-action, .next-section
+	{
+		display: none;
+	}
+
+	#container-general
+	{
+		height: auto;
+		overflow: initial;
+	}
+
+	#lightbox .container-all-icons
+	{
+		width: 100%;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	#lightbox .section-icons .info
+	{
+		position: relative;
+		left: initial;
+		margin-bottom: 40px;
+
+	}
+
+	#section-1, #section-2, #section-3, #section-4, #section-1.show, #section-2.show, #section-3.show, #section-4.show, #section-1.hide-top, #section-2.hide-top, #section-3.hide-top, #section-4.hide-top, #section-1.hide-bottom, #section-2.hide-bottom, #section-3.hide-bottom, #section-4.hide-bottom
+	{
+		opacity: 1;
+		height: auto;
+		position: relative;
+		left: initial;
+		top: initial;
+		-webkit-transform: translate(0%,0%);
+		   -moz-transform: translate(0%,0%);
+		    -ms-transform: translate(0%,0%);
+		     -o-transform: translate(0%,0%);
+		        transform: translate(0%,0%);
+	}
+	#section-2 > .content, #section-3 > .content
+	{
+		width: 100%;
+		position: relative;
+		top: initial;
+		left: initial;
+		-webkit-transform: translate(0%, 0%);
+		-ms-transform: translate(0%, 0%);
+		-o-transform: translate(0%, 0%);
+		transform: translate(0%, 0%);
+	}
+	#section-1
+	{
+		min-height: 400px;
+		height: 100vh;
+		background-image: linear-gradient(136deg, #ff9e7f 0%, #ffc86d 100%);
+	}
+	#section-2
+	{
+		background-image: linear-gradient(136deg, #7e7bd3 0%, #bc7bd3 100%);
+	}
+	#section-2 > .content
+	{
+		margin: auto;
+		max-width: 100%;
+		width: 580px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	#section-2 .thumb
+	{
+		height: 145px;
+		width: 145px;
+	}
+	#section-3
+	{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-image: linear-gradient(136deg, #ff7a7a 0%, #ff7ab6 100%);
+	}
+	#section-4
+	{
+		min-height: 500px;
+		height: 100vh !important;
+		background-image: linear-gradient(136deg, #8ec8e1 0%, #8ee1b9 100%);
+	}
+	#section-4 .content
+	{
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	
+
+}
+
+
+@media screen and (max-width: 650px) {
+	
+	#lightbox .container-title
+	{
+		height: 50px;
+		width: 200px;
+		border: 2px solid #353535;
+	}
+	#lightbox h1
+	{
+		font-size: 21px;
+	}
+	#lightbox .container-title svg
+	{
+		height: 125px;
+	}
+
+	#section-2 > .content
+	{
+		width: 435px;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+
+	#section-1 .container-title
+	{
+		height: 50px;
+		width: 200px;
+		border: 2px solid #353535;
+	}
+	#section-1 h1
+	{
+		font-size: 21px;
+	}
+	#section-1 .container-title svg
+	{
+		height: 125px;
+	}
+	#section-2 > .content
+	{
+		width: 435px;
+	}
+	#section-3 h3
+	{
+		font-size: 32px;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	#section-3 .content > p
+	{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	#section-3 .elmnt
+	{
+		display: block;
+		margin: 0px;
+		margin-top: 40px;
+	}
+	#section-4 .content h3
+	{
+		font-size: 32px;
+	}
+
+
+}
+
+@media screen and (max-width: 450px) {
+
+	#section-2 > .content
+	{
+		width: 100%;
+	}
+	#section-2 .thumb
+	{
+		width: 50vw;
+		height: 50vw;
+	}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

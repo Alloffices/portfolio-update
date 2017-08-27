@@ -1,0 +1,208 @@
+@media screen and (max-width: 1200px) {
+	.container-info .container-2 .features
+	{
+		width: 100%;
+		margin-right: 0px;
+	}
+	.container-info .container-2 .file-type
+	{
+		width: 100%;
+		margin-right: 0px;
+		margin-top: 40px;
+	}
+	.container-info .container-2 .file-type .content
+	{
+		width: 100%;
+	}
+	.container-info .container-2 .about-author .info
+	{
+		width: calc(100% - 336px);
+	}
+	.container-info .container-2 .container-other-product
+	{
+		width: 150px;
+	}
+	.container-info .container-2 .file-size
+	{
+		margin-top: 40px;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.container-info > .info
+	{
+		display: block;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.container-info > .action
+	{
+		display: block;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 40px;
+	}
+	.container-info .about-author .content{
+		padding-top: 25px;
+	}
+	.container-info .about-author .content .follow .content,
+{
+	float: left;
+	width: 50%;
+
+}
+.container-info .about-author .content .follow,
+.container-info .about-author .content .text-part
+{
+		display: inline-block;
+    width: 50%;
+    margin-top: 0;
+    float: left;
+    vertical-align: top;
+	}
+
+	.container-info .container-2 .about-author > .content
+	{
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	.container-info .container-2 .about-author .info
+	{
+		width: calc(100% - 156px);
+	}
+	.container-info .container-2 .container-other-product
+	{
+		display: block;
+		width: calc(100% - 70px);
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 55px;
+	}
+
+	.container-info>.action .buy
+	{
+		width: 100%;
+	}
+	.container-info>.action .preview
+	{
+		width: 100%;
+	}
+	.container-info>.action .preview_link 
+	{
+		width: 100%;
+	}
+
+	.container-share-like
+	{
+		text-align: center;
+	}
+	.container-info > .action .like
+	{
+		margin-right: 77px;
+	}
+	.container-info>.action .send-link
+	{
+		margin-top: 0px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.container-share-like
+	{
+		text-align: left;
+	}
+	.container-info>.action .like
+	{
+		margin-right: 0px;
+	}
+	.container-info>.action .send-link
+	{
+		margin-top: 0px;
+		display: block;
+		margin-top: 28px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.cover .badge-exclu
+	{
+		top: 60px;
+		left: 0px;
+		border: none;
+		background-color: transparent;
+	}
+	.cover .badge-exclu .text br
+	{
+		display: none;
+	}
+	.cover .content
+	{
+		width: 100%;
+		left: 0px;
+	}
+	.cover h1
+	{
+		font-size: 24px;
+		max-width: 90%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		text-align: center;
+		margin: auto;
+	}
+	.cover p
+	{
+		text-align: center;
+		margin: auto;
+	}
+
+	.nav-info
+	{
+		left: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.container-info
+	{
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container-info .container-1 img
+	{
+		width: 100%;
+		margin: 0px !important;
+		margin-bottom: 14px !important;
+	}
+
+	.container-info .container-2 .about-author .pp
+	{
+		margin: auto;
+		display: block;
+	}
+	.container-info .container-2 .about-author .info
+	{
+		display: block;
+		width: calc(100% - 70px);
+		margin: auto;
+	}
+	.container-info .container-2 .about-author .name
+	{
+		text-align: center;
+	}
+	.container-info .container-2 .about-author .place
+	{
+		text-align: center;
+	}
+	.cover .badge-exclu
+	{
+
+	}
+}

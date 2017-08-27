@@ -1,0 +1,53 @@
+@media screen and (max-width: 900px) {
+	.license_table
+	{
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#nav-profil
+	{
+		display: block;
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid lightgrey;
+	}
+	#nav-profil li
+	{
+		display: inline-block;
+		width: 25%;
+	}
+	#nav-profil li span
+	{
+		display: none;
+	}
+
+	#container-legal
+	{
+		margin-top: 40px;
+		padding: 0px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#nav-profil li
+	{
+		display: inline-block;
+		width: 50%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.license_table
+	{
+		font-size: 8px;
+	}
+}
+@media screen and (max-width: 374px) {
+	#nav-profil li
+	{
+		font-size: 13px;
+	}
+
+}

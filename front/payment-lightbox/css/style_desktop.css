@@ -1,0 +1,3076 @@
+#payment-lightbox {
+	cursor: pointer;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 15;
+	overflow: auto;
+}
+
+.container-payment {
+	cursor: default;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 600px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------- HEAD PAYMENT ----------- */
+
+.container-payment .head {
+	width: 100%;
+	height: 90px;
+	border-bottom: 1px solid #e0e0e0;
+	position: relative;
+}
+
+.container-payment .head-payment {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+	-ms-transition: opacity .25s ease;
+	-o-transition: opacity .25s ease;
+	transition: opacity .25s ease;
+}
+
+.container-payment .head-payment.payment-method .previous,
+.container-payment .head-payment.payement-method-applepay .previous,
+.container-payment .head-payment.payement-method-paypal .previous
+{
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 18px;
+	position: absolute;
+	z-index: 1;
+	color: #777;
+	font-family: HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	top: 50%;
+	left: 35px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+
+	display: none;
+}
+.container-payment .head-payment.payment-method .previous svg,
+.container-payment .head-payment.payement-method-applepay .previous svg,
+.container-payment .head-payment.payement-method-paypal .previous svg
+{
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.container-payment .head-payment.choice-payment-method .title,
+.container-payment .head-payment.download .title {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.container-payment .head-payment.payment-method .text,
+.container-payment .head-payment.payement-method-applepay .text,
+.container-payment .head-payment.payement-method-paypal .text
+{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.container-payment .head-payment.payment-method .text .title,
+.container-payment .head-payment.payement-method-applepay .text .title,
+.container-payment .head-payment.payement-method-paypal .text .title
+{
+	color: #5aafd7;
+	font-family: HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+
+.container-payment .head-payment.payment-method .text .subtitle,
+.container-payment .head-payment.payement-method-applepay .text .subtitle,
+.container-payment .head-payment.payement-method-paypal .text .subtitle
+{
+	color: #333;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 18px;
+}
+
+.container-payment .head-payment.download .title  span {
+	display: block;
+	color: #666561;
+	font-size: 13px;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.container-payment .head-payment.payment-method .guest,
+.container-payment .head-payment.download .guest,
+.container-payment .head-payment.payement-method-applepay .guest,
+.container-payment .head-payment.payement-method-paypal .guest
+{
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	right: 35px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.container-payment.log .head-payment .guest
+{
+	display: none;
+}
+.container-payment .head-payment.payment-method .guest .check-box,
+.container-payment .head-payment.download .guest .check-box,
+.container-payment .head-payment.payement-method-applepay .guest .check-box,
+.container-payment .head-payment.payement-method-paypal .guest .check-box
+{
+	width: 14px;
+	height: 14px;
+	border: 1px solid #777;
+	border-radius: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 8px;
+	overflow: hidden;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.container-payment .head-payment .guest.active .check-box
+{
+	border-color: #333;
+}
+.container-payment .head-payment .guest svg
+{
+	stroke: #333;
+	height: 8px;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	-webkit-transform: translate(-50%,-50%) scale(0);
+	-ms-transform: translate(-50%,-50%) scale(0);
+	-o-transform: translate(-50%,-50%) scale(0);
+	transform: translate(-50%,-50%) scale(0);
+	-webkit-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	   -moz-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	     -o-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	        transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+}
+.container-payment .head-payment .guest.active svg
+{
+	-webkit-transform: translate(-50%,-50%) scale(1);
+	-ms-transform: translate(-50%,-50%) scale(1);
+	-o-transform: translate(-50%,-50%) scale(1);
+	transform: translate(-50%,-50%) scale(1);
+}
+.container-payment .head-payment .guest .name
+{
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.container-payment .head-payment .guest.active .name
+{
+	color: #333;
+}
+
+.container-payment .head-payment.payment-method .back-to-shop,
+.container-payment .head-payment.download .back-to-shop {
+	cursor: pointer;
+	color: #777;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	text-decoration: underline;
+	position: absolute;
+	top: 50%;
+	right: 26px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.container-payment.mode-empty .head,
+.container-payment.mode-login .head,
+.container-payment.mode-signup .head {
+	display: none;
+}
+
+.container-payment.mode-payment-method .head-payment.payment-method {
+	opacity: 1;
+	z-index: 2;
+}
+.container-payment.mode-download .head-payment.download {
+	opacity: 1;
+	z-index: 2;
+}
+.container-payment.mode-choice-payment-method .head-payment.choice-payment-method {
+	opacity: 1;
+	z-index: 2;
+}
+.container-payment.mode-payment-method-applepay .head-payment.payement-method-applepay
+{
+	opacity: 1;
+	z-index: 2;
+}
+.container-payment.mode-payment-method-paypal .head-payment.payement-method-paypal
+{
+	opacity: 1;
+	z-index: 2;
+}
+
+/* ----------- END HEAD PAYMENT ----------- */
+
+
+/* ----------- CONTENT PAYMENT ----------- */
+
+.container-payment > .content {
+	border-radius: 3px;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.container-payment .content-payment {
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+/* MODE EMPTY */
+.container-payment.mode-empty > .content {
+	height: 338px;
+}
+
+.container-payment.mode-empty .content-payment.empty {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+/* END MODE EMPTY */
+
+/* MODE LOGIN */
+.container-payment.mode-login > .content {
+	height: 412px;
+}
+
+.container-payment.mode-login .content-payment.login {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-login .content-payment.empty {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE LOGIN */
+
+/* MODE SIGNUP */
+.container-payment.mode-signup > .content {
+	height: 526px;
+}
+
+.container-payment.mode-signup .content-payment.signup {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-signup .content-payment.empty,
+.container-payment.mode-signup .content-payment.login {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE SIGNUP */
+
+
+/* MODE CHOICE PAYEMENT METHOD */
+.container-payment.mode-choice-payment-method > .content {
+	height: 257px;
+}
+
+.container-payment.mode-choice-payment-method .content-payment.choice-payment-method {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-choice-payment-method .content-payment.empty,
+.container-payment.mode-choice-payment-method .content-payment.login,
+.container-payment.mode-choice-payment-method .content-payment.signup {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE CHOICE PAYEMENT METHOD */
+
+
+/* MODE PAYEMENT METHOD */
+.container-payment.mode-guest.mode-payment-method > .content {
+	height: 621px;
+}
+.container-payment.mode-payment-method > .content {
+	height: 484px;
+}
+.container-payment.log.mode-payment-method > .content {
+	height: 496px;
+}
+
+.container-payment.mode-payment-method .content-payment.payment-method {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-payment-method .content-payment.empty,
+.container-payment.mode-payment-method .content-payment.login,
+.container-payment.mode-payment-method .content-payment.signup,
+.container-payment.mode-payment-method .content-payment.choice-payment-method {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE PAYEMENT METHOD */
+
+
+/* MODE PAYEMENT METHOD APPLE PAY */
+.container-payment.mode-payment-method-applepay > .content {
+	height: 287px;
+}
+
+.container-payment.mode-payment-method-applepay .content-payment.payment-method-applepay {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-payment-method-applepay .content-payment.empty,
+.container-payment.mode-payment-method-applepay .content-payment.login,
+.container-payment.mode-payment-method-applepay .content-payment.signup,
+.container-payment.mode-payment-method-applepay .content-payment.choice-payment-method {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE PAYEMENT METHOD APPLE PAY */
+
+/* MODE PAYEMENT METHOD PAYPAL */
+.container-payment.mode-payment-method-paypal > .content {
+	height: 287px;
+}
+
+.container-payment.mode-payment-method-paypal .content-payment.payment-method-paypal {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-payment-method-paypal .content-payment.empty,
+.container-payment.mode-payment-method-paypal .content-payment.login,
+.container-payment.mode-payment-method-paypal .content-payment.signup,
+.container-payment.mode-payment-method-paypal .content-payment.choice-payment-method {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+/* END MODE PAYEMENT METHOD PAYPAL */
+
+
+/* MODE DOWNLOAD */
+
+.container-payment.mode-download > .content {
+	height: 206px;
+}
+
+.container-payment.mode-download .content-payment.download {
+	z-index: 5;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.container-payment.mode-download .content-payment.empty,
+.container-payment.mode-download .content-payment.login,
+.container-payment.mode-download .content-payment.signup,
+.container-payment.mode-download .content-payment.payment-method {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+/* END MODE DOWNLOAD */
+
+/* ----------- END CONTENT PAYMENT ----------- */
+
+
+/* EMPTY */
+
+.content-payment.empty {
+	height: 338px;
+	background-color: #fafafa;
+}
+
+.content-payment.empty .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.content-payment.empty svg {
+	display: block;
+	width: 42px;
+	margin: auto;
+	margin-bottom: 22px;
+}
+
+.content-payment.empty .title {
+	color: #333;
+	font-size: 18px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 10px;
+}
+
+.content-payment.empty p {
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+}
+/* END EMPTY */
+
+
+/* LOGIN */
+.content-payment.login {
+	height: 412px;
+	padding-bottom: 122px;
+	background-color: #fafafa;
+}
+
+.content-payment.login .content {
+	width: 100%;
+	padding-top: 22px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.content-payment.login .content svg {
+	display: block;
+	width: 33px;
+	margin: auto;
+	margin-bottom: 17px;
+}
+
+.content-payment.login .content .title {
+	color: #333;
+	font-size: 18px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content-payment.login .content .guest
+{
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	right: 60px;
+	top: 20px;
+}
+.container-payment.log .content-payment.login .content .guest
+{
+	/*display: none;*/
+}
+.content-payment.login .content .guest .check-box
+{
+	width: 14px;
+	height: 14px;
+	border: 1px solid #777;
+	border-radius: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 8px;
+	overflow: hidden;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.content-payment.login .content .guest.active .check-box
+{
+	border-color: #333;
+}
+.content-payment.login .content .guest svg
+{
+	stroke: #333;
+	height: 8px;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	-webkit-transform: translate(-50%,-50%) scale(0);
+	-ms-transform: translate(-50%,-50%) scale(0);
+	-o-transform: translate(-50%,-50%) scale(0);
+	transform: translate(-50%,-50%) scale(0);
+	-webkit-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	   -moz-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	     -o-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	        transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+}
+.content-payment.login .content .guest.active svg
+{
+	-webkit-transform: translate(-50%,-50%) scale(1);
+	-ms-transform: translate(-50%,-50%) scale(1);
+	-o-transform: translate(-50%,-50%) scale(1);
+	transform: translate(-50%,-50%) scale(1);
+}
+.content-payment.login .content .guest .name
+{
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+.content-payment.login .content .guest.active .name
+{
+	color: #333;
+}
+
+.content-payment.login .container-input {
+	margin-top: 30px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	border-bottom: 1px solid #d7dad9;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment.login .container-input.focus {
+	border-color: #333;
+}
+
+.content-payment.login .container-input.error {
+	border-color: #ff583e;
+}
+
+.content-payment.login .container-input .placeholder {
+	position: absolute;
+	left: 5px;
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment.login .container-input.error .placeholder {
+	color: #ff583e;
+}
+
+.content-payment.login .container-input.focus .placeholder, .content-payment.login .container-input.value .placeholder {
+	-webkit-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-moz-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-ms-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-o-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	transform: scale(0.7) translateX(-20%) translateY(-20px);
+}
+
+.content-payment.login .container-input input {
+	border: none;
+	color: #333;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+	width: 100%;
+	padding-bottom: 9px;
+	padding-left: 5px;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+}
+.content-payment.login .container-input.error input {
+	color: #ff583e;
+}
+
+.content-payment.login .forgot {
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #777;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	margin-top: 15px;
+}
+
+.content-payment.login .forgot a {
+	text-decoration: none;
+	color: #333;
+	text-decoration: underline;
+}
+
+.content-payment.login .footer {
+	height: 122px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: #FFF;
+	z-index: 1;
+	border-top: 1px solid #e0e0e0;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.content-payment.login .footer .login {
+	display: inline-block;
+	vertical-align: middle;
+	width: 220px;
+	height: 60px;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.login .footer .login {
+	background-color: #333;
+	position: relative;
+	overflow: hidden;
+}
+
+.content-payment.login .footer .login.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.login .footer .login .text-log {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.login .footer .login.loading .text-log {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.login .footer .login.true .text-log {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.login .footer .login .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.login .footer .login.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.login .footer .login.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.login .footer .login .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.login .footer .login.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.login .footer .login .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+
+.content-payment.login .footer .create-account {
+	display: inline-block;
+	vertical-align: middle;
+	width: 220px;
+	height: 60px;
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	line-height: 60px;
+	color: #333;
+	font-size: 13px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+/* END LOGIN */
+
+/* SIGNUP */
+.content-payment.signup {
+	height: 526px;
+	padding-bottom: 122px;
+	background-color: #fafafa;
+}
+
+.content-payment.signup .content {
+	width: 100%;
+	padding-top: 22px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.content-payment.signup .content svg {
+	display: block;
+	width: 33px;
+	margin: auto;
+
+	margin-bottom: 17px;
+}
+
+.content-payment.signup .content .title {
+	color: #333;
+	font-size: 18px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content-payment.signup .content .guest
+{
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	right: 60px;
+	top: 20px;
+}
+
+.container-payment.log .content-payment.signup .content .guest
+{
+	display: none;
+}
+
+.content-payment.signup .content .guest .check-box
+{
+	width: 14px;
+	height: 14px;
+	border: 1px solid #777;
+	border-radius: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 8px;
+	overflow: hidden;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+
+.content-payment.signup .content .guest.active .check-box
+{
+	border-color: #333;
+}
+
+.content-payment.signup .content .guest svg
+{
+	stroke: #333;
+	height: 8px;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	-webkit-transform: translate(-50%,-50%) scale(0);
+	-ms-transform: translate(-50%,-50%) scale(0);
+	-o-transform: translate(-50%,-50%) scale(0);
+	transform: translate(-50%,-50%) scale(0);
+	-webkit-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	   -moz-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	     -o-transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+	        transition: all 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650);
+}
+
+.content-payment.signup .content .guest.active svg
+{
+	-webkit-transform: translate(-50%,-50%) scale(1);
+	-ms-transform: translate(-50%,-50%) scale(1);
+	-o-transform: translate(-50%,-50%) scale(1);
+	transform: translate(-50%,-50%) scale(1);
+}
+
+.content-payment.signup .content .guest .name
+{
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+
+.content-payment.signup .content .guest.active .name
+{
+	color: #333;
+}
+
+.content-payment.signup .container-input {
+	margin-top: 30px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	border-bottom: 1px solid #d7dad9;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment.signup .container-input:nth-child(4), .content-payment.signup .container-input:nth-child(5) {
+	display: inline-block;
+	vertical-align: top;
+	width: 47%;
+}
+
+.content-payment.signup .container-input:nth-child(5) {
+	margin-left: 6%;
+}
+
+.content-payment.signup .container-input.focus {
+	border-color: #333;
+}
+
+.content-payment.signup .container-input.error {
+	border-color: #ff583e;
+}
+
+.content-payment.signup .container-input .placeholder {
+	position: absolute;
+	left: 5px;
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment.signup .container-input.error .placeholder {
+	color: #ff583e;
+}
+
+.content-payment.signup .container-input.focus .placeholder, .content-payment.signup .container-input.value .placeholder {
+	-webkit-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-moz-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-ms-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-o-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	transform: scale(0.7) translateX(-20%) translateY(-20px);
+}
+
+.content-payment.signup .container-input input {
+	border: none;
+	color: #333;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+	width: 100%;
+	padding-bottom: 9px;
+	padding-left: 5px;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+}
+.content-payment.signup .container-input.error input {
+	border-color: #ff583e;
+}
+
+
+.content-payment.signup .footer {
+	height: 122px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: #FFF;
+	z-index: 1;
+	border-top: 1px solid #e0e0e0;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.content-payment.signup .footer .create-account {
+	display: inline-block;
+	vertical-align: middle;
+	width: 220px;
+	height: 60px;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.signup .footer .create-account {
+	background-color: #333;
+	position: relative;
+}
+
+.content-payment.signup .footer .create-account.loading {
+	background-color: #333;
+}
+
+.content-payment.signup .footer .create-account.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.signup .footer .create-account .text-create-account {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.signup .footer .create-account.loading .text-create-account {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.signup .footer .create-account.true .text-create-account {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.signup .footer .create-account .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.signup .footer .create-account.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	transition: left 1.5s ease-in-out;
+	-webkit-transition: left 1.5s ease-in-out;
+
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+.content-payment.payment-method .payment-submit.loading:after {
+	content : "Please wait, we're preparing your product";
+	color:white;
+	left: calc(15% + 16px);
+	text-transform: uppercase;
+	top : 25px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 10px;
+	opacity: 0;
+	position: absolute;
+	transition: opacity .25s ease-in;
+}
+
+.content-payment.payment-method .payment-submit.loading.accept:after {
+	opacity: 1;
+
+ }
+ .content-payment.payment-method .payment-submit.loading.accept .load {
+	left:15%;
+ }
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.signup .footer .create-account.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.signup .footer .create-account .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.signup .footer .create-account.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.signup .footer .create-account .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+
+.content-payment.signup .footer .login {
+	display: inline-block;
+	vertical-align: middle;
+	width: 220px;
+	height: 60px;
+	margin-right: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	line-height: 60px;
+	color: #333;
+	font-size: 13px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 12px;
+	text-decoration: underline;
+}
+/* END SIGNUP */
+
+/* CHOICE PAYEMENT MOTHOD */
+
+.content-payment.choice-payment-method {
+	height: 257px;
+}
+.content-payment.choice-payment-method .content
+{
+	width: 100%;
+	height: 100%;
+	background-color: #fafafa;
+	padding-top: 30px;
+	text-align: center;
+	font-size: 0px;
+}
+.content-payment.choice-payment-method .method
+{
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	width: 175px;
+	height: 145px;
+	background-color: white;
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+	margin-right: 5px;
+	margin-left: 5px;
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.content-payment.choice-payment-method .method.unvalid
+{
+	cursor: default;
+}
+.content-payment.choice-payment-method .method.available:hover
+{
+	box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+	height: 205px;
+}
+.content-payment.choice-payment-method .method .cover-unvalid
+{
+	display: none;
+	position: absolute;
+	background-color: #FFF;
+}
+.content-payment.choice-payment-method .method.unvalid .cover-unvalid
+{
+	display: block;
+}
+.content-payment.choice-payment-method .method .cover,
+.content-payment.choice-payment-method .method .cover-unvalid
+{
+	width: 100%;
+	height: 145px;
+	position: relative;
+}
+.content-payment.choice-payment-method .method .cover-unvalid
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+.content-payment.choice-payment-method .method .cover .logo,
+.content-payment.choice-payment-method .method .cover-unvalid .logo
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+.content-payment.choice-payment-method .method .cover-unvalid .logo
+{
+	filter: blur(3px);
+}
+.content-payment.choice-payment-method .method .cover .logo svg,
+.content-payment.choice-payment-method .method .cover .logo img,
+.content-payment.choice-payment-method .method .cover-unvalid .logo svg,
+.content-payment.choice-payment-method .method .cover-unvalid .logo img
+{
+	width: 100%;
+}
+.content-payment.choice-payment-method .method.credit-card .cover .logo,
+.content-payment.choice-payment-method .method.credit-card .cover-unvalid .logo
+{
+	width: 75px;
+}
+.content-payment.choice-payment-method .method.applepay .cover .logo,
+.content-payment.choice-payment-method .method.applepay .cover-unvalid .logo
+{
+	width: 70px;
+}
+.content-payment.choice-payment-method .method.paypal .cover .logo,
+.content-payment.choice-payment-method .method.paypal .cover-unvalid .logo
+{
+	width: 36px;
+}
+.content-payment.choice-payment-method .method .cover .title
+{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	color: #333;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+}
+.content-payment.choice-payment-method .method .cover-unvalid .text
+{
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	opacity: 0.7;
+}
+.content-payment.choice-payment-method .method .cover-unvalid .text .title
+{
+	color: #777;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16px;
+}
+.content-payment.choice-payment-method .method .cover-unvalid .text .subtitle
+{
+	color: #777;
+	font-family: HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 11px;
+}
+.content-payment.choice-payment-method .method .select
+{
+	cursor: pointer;
+	color: white;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 11px;
+	line-height: 45px;
+	text-align: center;
+	width: 156px;
+	height: 45px;
+	background-color: #333;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 50%;
+	top: 150px;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+/* ENDCHOICE PAYEMENT MOTHOD */
+
+/* PAYEMENT METHOD */
+
+.container-payment.mode-guest .content-payment.payment-method {
+	height: 621px;
+}
+.content-payment.payment-method {
+	height: 484px;
+}
+.container-payment.log .content-payment.payment-method {
+	height: 496px;
+}
+.content-payment.payment-method .content {
+	width: 100%;
+}
+
+.content-payment .list-product {
+	width: 100%;
+	background-color: #fafafa;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.content-payment .cart-product {
+	width: 100%;
+	height: 95px;
+	padding-left: 26px;
+	padding-right: 26px;
+	position: relative;
+	font-size: 0px;
+}
+
+.content-payment .cart-product .thumb {
+	height: 100%;
+	width: 45%;
+	padding-left: 62px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.content-payment .cart-product .container-license {
+	height: 40px;
+	width: 30%;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.content-payment .cart-product .container-license a {
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	right: 30px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.content-payment .cart-product .container-license a svg {
+	height: 14px;
+}
+
+.content-payment .cart-product .container-license:after
+{
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px 3.5px 0 3.5px;
+	border-color: #333 transparent transparent transparent;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+
+}
+
+.content-payment .cart-product .license {
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+	height: 100%;
+	background-color: white;
+	border: none;
+	border: 1px solid #cfcfcf;
+	border-radius: 2px;
+	width: 100%;
+	outline: none;
+	cursor: pointer;
+	padding-left: 10px;
+}
+
+.content-payment .cart-product .price {
+	position: absolute;
+	right: 26px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	text-align: right;
+	color: #333;
+	font-size: 15px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+}
+
+.content-payment .cart-product .price .reduction-final-price
+{
+	display: none;
+	margin-left: 5px;
+	font-size: 15px;
+	color: #ff8162;
+}
+#payment-lightbox.deals .content-payment .cart-product .price .reduction-final-price,
+.content-payment .cart-product .price .initial-price
+{
+	display: inline-block;
+	vertical-align: middle;
+} 
+.content-payment .cart-product .price .initial-price
+{
+	position: relative;
+}
+#payment-lightbox.deals .content-payment .cart-product .price .initial-price
+{
+	opacity: 0.7;
+	font-size: 12px;
+}
+#payment-lightbox.deals .content-payment .cart-product .price .initial-price:after
+{
+	content: '';
+	width: calc(100% + 6px);
+	height: 1px;
+	background-color: #333;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+  	-ms-transform: translate(-50%,-50%);
+  	-o-transform: translate(-50%,-50%);
+  	transform: translate(-50%,-50%);
+}
+
+.content-payment .cart-product .thumb .img {
+	width: 45px;
+	height: 38px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.content-payment .cart-product .thumb .container-name-remove {
+	width: 100%;
+	padding-right: 10px;
+	padding-top: 33px;
+}
+
+.content-payment .cart-product .thumb .name {
+	color: #333;
+	font-size: 13px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.content-payment .cart-product .thumb .remove {
+	color: #777;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	cursor: pointer;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment .cart-product .thumb .remove:hover {
+	color: #ff583e;
+}
+
+.content-payment .form-payement-card
+{
+	padding-left: 110px;
+	padding-right: 110px;
+}
+
+.content-payment .container-input {
+	margin-top: 30px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	border-bottom: 1px solid #d7dad9;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment .container-input img
+{
+	position: absolute;
+	height: 25px;
+	right: 20px;
+	bottom: 12px;
+}
+
+.content-payment .container-input.focus,
+.content-payment .container-input input:focus {
+	border-color: #333;
+}
+
+.content-payment .container-input.error {
+	border-color: #ff583e;
+}
+
+.content-payment.payment-method .payment-errors{
+	color: #ff583e;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	position: absolute;
+	bottom: 140px;
+	left: 0px;
+	width: 100%;
+	padding-left: 110px;
+	padding-right: 110px;
+}
+
+.content-payment .container-input .placeholder {
+	position: absolute;
+	left: 5px;
+	color: #777;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+.content-payment .container-input.error .placeholder {
+	color: #ff583e;
+}
+
+.content-payment .container-input.focus .placeholder, .content-payment .container-input.value .placeholder {
+	-webkit-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-moz-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-ms-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	-o-transform: scale(0.7) translateX(-20%) translateY(-20px);
+	transform: scale(0.7) translateX(-20%) translateY(-20px);
+}
+
+.content-payment .container-input input {
+	border: none;
+	color: #333;
+	font-size: 14px;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	outline: none;
+	width: 100%;
+	padding-bottom: 9px;
+	padding-left: 5px;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+}
+.content-payment .container-input.error input {
+	color: #ff583e;
+}
+.content-payment .container-input:nth-child(1)
+{
+	display: none;
+}
+.container-payment.mode-guest .content-payment .container-input:nth-child(1)
+{
+	display: block;
+}
+.content-payment .container-input:nth-child(3) input, .content-payment .container-input:nth-child(5) input {
+	width: calc(100% - 84px);
+}
+
+
+.container-payment.log .content-payment .container-input:nth-child(4), .container-payment.log .content-payment .container-input:nth-child(5)
+{
+	display: none;
+}
+
+.content-payment .deal-code-valid
+{
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 50px;
+	height: 30px;
+	background-color: #333;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 1;
+	right: 0px;
+	bottom: 5px;
+	text-align: center;
+
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+.content-payment .deal-code-valid:hover
+{
+	background-color: #6bca97;
+}
+
+.content-payment .deal-code-valid.loading {
+	background-color: #333;
+}
+
+.content-payment .deal-code-valid.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment .deal-code-valid.false {
+	background-color: #ff583e;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment .deal-code-valid .text-payment {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 10px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment .deal-code-valid.loading .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment .deal-code-valid.true .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment .deal-code-valid .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment .deal-code-valid.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment .deal-code-valid.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment .deal-code-valid .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment .deal-code-valid.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment .deal-code-valid .valid svg {
+	height: 10px;
+	stroke: #FFF;
+}
+
+.content-payment.payment-method .payment-submit
+{
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	height: 60px;
+	background-color: #6bca97;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	margin-top: 60px;
+	position: relative;
+	text-align: center;
+
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.payment-method .payment-submit.loading {
+	background-color: #333;
+}
+
+.content-payment.payment-method .payment-submit.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method .payment-submit.false {
+	background-color: #ff583e;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method .payment-submit .text-payment {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.content-payment.payment-method .payment-submit .text-payment svg
+{
+	fill: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	height: 14px;
+	margin-right: 20px;
+}
+
+.content-payment.payment-method .payment-submit .text-payment .reduction-final-price
+{ 
+	display: none; 
+	margin-left: 5px; 
+	font-size: 12px;
+}
+#payment-lightbox.deals .content-payment.payment-method .payment-submit .text-payment .reduction-final-price,
+.content-payment.payment-method .payment-submit .text-payment .initial-price
+{ 
+	display: inline-block; 
+	vertical-align: middle;
+} 
+.content-payment.payment-method .payment-submit .text-payment .initial-price
+{ 
+	position: relative;
+}
+#payment-lightbox.deals .content-payment.payment-method .payment-submit .text-payment .initial-price
+{ 
+	opacity: 0.7;
+	margin-left: 20px;
+}
+#payment-lightbox.deals .content-payment.payment-method .payment-submit .text-payment .initial-price:after
+{ 
+	content: ''; 
+	width: calc(100% + 6px); 
+	height: 1px; 
+	background-color: #FFF; 
+	position: absolute; 
+	top: 40%; 
+	left: 50%; 
+	-webkit-transform: translate(-50%,-50%);   
+	-ms-transform: translate(-50%,-50%);   
+	-o-transform: translate(-50%,-50%);   
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.payment-method .payment-submit.loading .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit.true .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method .payment-submit.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.payment-method .payment-submit.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method .payment-submit.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.payment-method .payment-submit .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+
+.content-payment.payment-method .payment-submit
+{
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	height: 60px;
+	background-color: #6bca97;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	margin-top: 60px;
+	position: relative;
+	text-align: center;
+
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.payment-method .payment-submit.loading {
+	background-color: #333;
+}
+
+.content-payment.payment-method .payment-submit.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method .payment-submit.false {
+	background-color: #ff583e;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method .payment-submit .text-payment {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.content-payment.payment-method .payment-submit .text-payment svg
+{
+	fill: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	height: 14px;
+	margin-right: 20px;
+}
+
+.content-payment.payment-method .payment-submit.loading .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit.true .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method .payment-submit.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.payment-method .payment-submit.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method .payment-submit .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method .payment-submit.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.payment-method .payment-submit .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+
+/* END PAYEMENT METHOD */
+
+
+/* PAYEMENT METHOD APPLE PAY */
+
+.content-payment.payment-method-applepay
+{
+	height: 287px;
+}
+.content-payment.payment-method-applepay .content
+{
+	width: 100%;
+}
+
+.content-payment.payment-method-applepay .action
+{
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 12px;
+	padding-bottom: 20px;
+	border-top: 1px solid #e1e1e1;
+}
+
+.content-payment.payment-method-applepay .action .payment-submit
+{
+	display: block;
+	margin: auto;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 370px;
+	margin: auto;
+	height: 60px;
+	background-color: #6bca97;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	position: relative;
+	text-align: center;
+
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.loading {
+	background-color: #333;
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.false {
+	background-color: #ff583e;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit .text-payment {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.content-payment.payment-method-applepay .action .payment-submit .text-payment svg
+{
+	fill: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.loading .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.true .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.payment-method-applepay .action .payment-submit .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+/* END PAYEMENT METHOD APPLE PAY */
+
+
+/* PAYEMENT METHOD PAYPAL */
+
+.content-payment.payment-method-paypal
+{
+	height: 287px;
+}
+.content-payment.payment-method-paypal .content
+{
+	width: 100%;
+}
+
+.content-payment.payment-method-paypal .action
+{
+	width: 100%;
+	margin-top: 40px;
+	padding-top: 12px;
+	padding-bottom: 20px;
+	border-top: 1px solid #e1e1e1;
+}
+
+.content-payment.payment-method-paypal .action .payment-submit
+{
+	display: block;
+	margin: auto;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 370px;
+	margin: auto;
+	height: 60px;
+	background-color: #6bca97;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	position: relative;
+	text-align: center;
+
+	-webkit-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-moz-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	-o-transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+	transition: transform 250ms cubic-bezier(0.085, 0.305, 0.550, 1.650), background-color 0.25s ease;
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.loading {
+	background-color: #333;
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.true {
+	background-color: #6bca97;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.false {
+	background-color: #ff583e;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit .text-payment {
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	color: #FFF;
+	font-size: 13px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.content-payment.payment-method-paypal .action .payment-submit .text-payment svg
+{
+	fill: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.loading .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.true .text-payment {
+	opacity: 0;
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit .load {
+	opacity: 0;
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	border: 1px solid #FFF;
+	border-left: 1px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.loading .load {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	-webkit-animation: rotating 0.5s linear 0.25s infinite;
+	-moz-animation: rotating 0.5s linear 0.25s infinite;
+	-ms-animation: rotating 0.5s linear 0.25s infinite;
+	-o-animation: rotating 0.5s linear 0.25s infinite;
+	animation: rotating 0.5s linear 0.25s infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: translate(-50%,-50%) rotate(0deg);
+		-moz-transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg);
+		-o-transform: translate(-50%,-50%) rotate(0deg);
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	to {
+		-ms-transform: translate(-50%,-50%) rotate(360deg);
+		-moz-transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg);
+		-o-transform: translate(-50%,-50%) rotate(360deg);
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.true .load {
+	-webkit-transform: translate(-50%,-50px);
+	-moz-transform: translate(-50%,-50px);
+	-ms-transform: translate(-50%,-50px);
+	-o-transform: translate(-50%,-50px);
+	transform: translate(-50%,-50px);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit .valid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%,50px);
+	-moz-transform: translate(-50%,50px);
+	-ms-transform: translate(-50%,50px);
+	-o-transform: translate(-50%,50px);
+	transform: translate(-50%,50px);
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit.true .valid {
+	opacity: 1;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.content-payment.payment-method-paypal .action .payment-submit .valid svg {
+	height: 20px;
+	stroke: #FFF;
+}
+/* END PAYEMENT METHOD PAYPAL */
+
+
+/* DOWNLOAD */
+
+.content-payment.download {
+	height: 206px;
+}
+
+.content-payment.download .content {
+	width: 100%;
+}
+
+.content-payment.download .list-product {
+	width: 100%;
+	background-color: #fafafa;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.content-payment.download .cart-product {
+	width: 100%;
+	height: 95px;
+	padding-left: 26px;
+	padding-right: 26px;
+}
+
+.content-payment.download .cart-product > div {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	position: relative;
+}
+
+.content-payment.download .cart-product .thumb {
+	width: 100%;
+	padding-left: 62px;
+}
+
+.content-payment.download .cart-product .thumb .img {
+	width: 45px;
+	height: 38px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid #d7dad9;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.content-payment.download .cart-product .thumb .container-name-license {
+	width: 100%;
+	padding-right: 10px;
+	padding-top: 33px;
+}
+
+.content-payment.download .cart-product .thumb .name {
+	color: #333;
+	font-size: 13px;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.content-payment.download .cart-product .thumb .license {
+	color: #777;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+}
+.content-payment.download .cart-product .thumb .receipt
+{
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.content-payment.download .cart-product .thumb .receipt svg
+{
+	height: 11px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 9px;
+	stroke: #333;
+}
+.content-payment.download .cart-product .thumb .receipt span
+{
+	color: #333;
+	font-family:HelveticaNeueLight;
+	-webkit-font-smoothing: antialiased;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.content-payment.download .download
+{
+	display: block;
+	font-family: GOTHAM-MEDIUM;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+	color: #333;
+	font-size: 12px;
+	height: 60px;
+	width: calc(100% - 50px);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	text-align: center;
+	line-height: 60px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* END DOWNLOAD */

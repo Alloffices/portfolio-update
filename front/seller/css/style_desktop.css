@@ -1,0 +1,110 @@
+@font-face {
+	font-family:font;
+	src:url(../fonts/font.html)
+}
+body, html, *
+{
+	padding: 0px;
+	margin: 0px;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* INFO SELLER */
+
+.info-seller
+{
+	width: 100%;
+	position: relative;
+  	padding-top: 100px;
+}
+.info-seller .pp
+{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin: auto;
+	margin-bottom: 14px;
+}
+.info-seller .name
+{
+	font-family:GOTHAM-MEDIUM;
+	text-align: center;
+	color: #333;
+	font-size: 15px;
+}
+.info-seller .place
+{
+	font-family:HelveticaNeueLight;
+	color: #333;
+	font-size: 11px;
+	text-align: center;
+}
+.info-seller p
+{
+	font-family:HelveticaNeueLight;
+	max-width: 435px;
+	margin: auto;
+	margin-top: 12px;
+	color: #333;
+	font-size: 13px;
+	line-height: 22px;
+	text-align: center;
+}
+.info-seller > a
+{
+	width: 100px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #5aafd7;
+	font-family:HelveticaNeueLight;
+	font-size: 13px;
+	text-decoration: underline;
+	margin: auto;
+	margin-top: 11px;
+}
+.info-seller .social
+{
+	margin-top: 40px;
+	text-align: center;
+}
+.info-seller .social a
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.info-seller .social a svg
+{
+	fill: #333;
+	height: 13px;
+}
+
+/* END INFO SELLER */
+
+
+/* PRODUCT SELLER */
+
+.product-seller
+{
+	width: 1280px;
+	margin: auto;
+	margin-top: 90px;
+	font-size: 0px;
+}
+
+/* END PRODUCT SELLER */

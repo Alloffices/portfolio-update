@@ -1,0 +1,21 @@
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    #top_facebook {background-image: url('../images/facebook2%402x.png');}
+    #top_facebook:hover {background-image: url('../images/facebook-hover2%402x.png');}
+    #top_twitter {background-image: url('../images/twitter2%402x.png');}
+    #top_mail {background-image: url('../images/mail%402x.png');}
+    #display_team_2, #display_text_2, #display_work_2 {background-image: url('../images/2colonnes%402x.html');}
+    #display_team_3, #display_text_3, #display_work_4 {background-image: url('../images/quadrillage%402x.html');}
+	.img_recent_posts {background-image: url('../images/arrow2%402x.png');}
+	#recent_posts p:hover + .img_recent_posts, #archives p:hover + .img_recent_posts, .img_recent_posts:hover  {background-image: url('../images/arrow2-hover%402x.png');}
+	#contact_social td div{	background-image: url('../images/footer_social%402x.png'); -webkit-background-size: 750px 206px;	background-size: 750px 206px; }
+	#contact_social td div:after { background-image: url('../images/footer_social%402x.png'); -webkit-background-size: 750px 206px;	background-size: 750px 206px; }
+
+	@media handheld and (max-width: 650px), screen and (max-width: 650px), screen and (max-device-width: 650px)  {
+
+	.nb_comments {background-image: url('../images/phones/comment%402x.png');}
+	.nb_comments.blue {background-image: url('../images/phones/comment-hover%402x.png');}
+	.likes {background-image: url('../images/phones/hearth%402x.png');}
+	.likes.red {background-image: url('../images/phones/hearth-hover%402x.png');}
+
+	}
+}

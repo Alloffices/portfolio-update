@@ -1,0 +1,34 @@
+@media screen and (max-width: 1150px) {
+	
+	footer > *
+	{
+		margin-right: 2%;
+  		margin-left: 2%;
+	}	
+
+}
+
+@media screen and (max-width: 900px) {
+	footer .logo
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

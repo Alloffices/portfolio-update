@@ -1,0 +1,164 @@
+@media screen and (max-width: 1150px) {
+	#section-features .container-features
+	{
+		width: 850px;
+	}
+	#section-features .features
+	{
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#section-features .container-features
+	{
+		width: 100%;
+	}
+	#section-features .features
+	{
+		display: block;
+		margin: auto;
+		margin-bottom: 90px;
+	}
+	#section-look
+	{
+		height: auto;
+		overflow: initial;
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
+	#section-look .text
+	{
+		text-align: center;
+		position: initial;
+	  	top: initial;
+	  	left: initial;
+		-webkit-transform: translateY(0%);
+		   -moz-transform: translateY(0%);
+		    -ms-transform: translateY(0%);
+		     -o-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+	#section-look p
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#section-look .open-shop
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#section-look img
+	{
+		display: block;
+		position: initial;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 50px;
+		right: initial;	
+		top: initial;
+		-webkit-transform: translateY(0%);
+		   -moz-transform: translateY(0%);
+		    -ms-transform: translateY(0%);
+		     -o-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	#section-home h1
+	{
+		font-size: 40px;
+	}
+	#section-home p
+	{
+		font-size: 15px;
+	}
+
+	#section-features
+	{
+		margin-top: 100px;
+	}
+	#section-features h2
+	{
+		font-size: 40px;
+	}
+	#section-features p
+	{
+		font-size: 15px;
+	}
+	#section-features .features
+	{
+		width: 100%;
+	}
+	#section-features .features .illu
+	{
+		height: 90px;
+	}
+	#section-features .features h3
+	{
+		font-size: 20px;
+	}
+	#section-features .features p
+	{
+		font-size: 14px;
+	}
+
+	#section-look h2
+	{
+		font-size: 40px;
+	}
+	#section-look p
+	{
+		font-size: 16px;
+	}
+
+	#open-shop
+	{
+		padding-top: 230px;
+		padding-bottom: 110px;
+	}
+	#open-shop .confirm-banner
+	{
+		top: 80px;
+		height: auto;
+		padding-left: 0px;
+		padding-right: 103px;
+	}
+	#open-shop .confirm-banner .text
+	{
+		overflow: initial;
+		text-overflow: initial;
+		white-space: initial;
+		line-height: initial;
+		padding: 15px;
+	}
+	#open-shop h2
+	{
+		font-size: 40px;
+	}
+	#open-shop .container-form
+	{
+		width: calc(100% - 30px);
+	}
+	
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}

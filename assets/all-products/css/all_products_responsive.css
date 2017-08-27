@@ -1,0 +1,173 @@
+@media screen and (min-width: 1600px) {
+	#container-all-product
+	{
+		width: 1600px;
+	}
+}
+@media screen and (max-width: 1280px) {
+	#container-all-product
+	{
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#container-all-product
+	{
+		width: 640px;
+	}
+	#container-all-product .head .text
+	{
+		padding-left: 0px;
+		text-align: center;
+	}
+	#container-all-product .head .filter
+	{
+		text-align: center;
+		margin-top: 30px;
+		top: initial;
+		right: initial;
+		position: initial;
+		-webkit-transform: translate(0%);
+		   -moz-transform: translate(0%);
+		    -ms-transform: translate(0%);
+		     -o-transform: translate(0%);
+		        transform: translate(0%);
+	}
+	.banner-exclusive-product
+	{
+		display: none;
+	}
+	#container-all-product.exclusive-product .banner-exclusive-product
+	{
+		display: none;
+	}
+	#container-all-product.exclusive-product .result-product
+	{
+		padding-top: 28px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	#container-all-product
+	{
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+	}
+
+	#container-all-product .head .filter .title
+	{
+		display: none;
+	}
+	#container-all-product .head .filter .container-filter-1
+	{
+		display: block;
+		width: 100%;
+		margin: 0px;
+		font-size: 0px;
+		height: 40px;
+		padding: 0px;
+	}
+	#container-all-product .head .filter .container-filter-1 > div
+	{
+		width: 25%;
+		height: 100%;
+		padding: 0px;
+		border: 1px solid rgba(51, 51, 51, 0.3);
+		text-align: center;
+		line-height: 40px;
+		margin: 0px;
+	}
+	#container-all-product .head .filter .container-filter-1 > div.active
+	{
+		background-color: #333;
+		color: #FFF;
+	}
+	#container-all-product .head .filter .container-filter-1 > div.active svg
+	{
+		fill: #FFF;
+	}
+	#container-all-product .head .filter .container-filter-1 > div:after
+	{
+		display: none;
+	}
+	#container-all-product .head .filter .container-filter-1 span
+	{
+		display: inline-block;
+	}
+	#container-all-product .head .filter .container-filter-1 svg
+	{
+		width: initial;
+		height: 9px;
+		display: inline-block;
+		position: initial;
+		left: initial;
+		top: initial;
+		-webkit-transform: translate(0%);
+		   -moz-transform: translate(0%);
+		    -ms-transform: translate(0%);
+		     -o-transform: translate(0%);
+		        transform: translate(0%);
+	}
+	#container-all-product .head .filter .container-filter-1 > div:nth-child(2)
+	{
+		border-right: 0px;
+	}
+	#container-all-product .head .filter .container-filter-1 > div:nth-child(3)
+	{
+		border-right: 0px;
+	}
+	#container-all-product .head .filter .container-filter-2
+	{
+		display: block;
+		width: 100%;
+		margin: 0px;
+		font-size: 0px;
+		height: 40px;
+	}
+	#container-all-product .head .filter .container-filter-2 > div
+	{
+		width: 50%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px !important;
+		border: 1px solid rgba(51, 51, 51, 0.3);
+		border-top: 0px;
+		text-align: center;
+		line-height: 40px;
+	}
+	#container-all-product .head .filter .container-filter-2 > div svg
+	{
+		width: initial;
+		height: 4px;
+		position: absolute;
+		left: initial;
+		top: 50%;
+		right: 10px;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	}
+	#container-all-product .head .filter .container-filter-2 > div:nth-child(1)
+	{
+		border-right: 0px;
+	}
+	#container-all-product .head .filter .container-filter-2 > div:nth-child(2) .drop-down, #container-all-product .head .filter .container-filter-2 > div:nth-child(1) .drop-down
+	{
+		top: calc(100% + 10px);
+		width: 90%;
+	}
+
+	#container-all-product .result-product
+	{
+		padding-top: 108px;
+	}
+	#container-all-product.exclusive-product .result-product
+	{
+		padding-top: 108px;
+	}
+}

@@ -1,0 +1,300 @@
+/*@font-face {
+  font-family:GOTHAM-MEDIUM;
+  src:url(../fonts/GOTHAM-MEDIUM.TTF)
+}
+@font-face {
+  font-family:GOTHAM-LIGHT;
+  src:url(../fonts/GOTHAM-LIGHT.TTF)
+}
+@font-face {
+  font-family:HelveticaNeueLight;
+  src:url(../fonts/HelveticaNeueLight.ttf)
+}
+@font-face {
+  font-family:MavenProLight-100;
+  src:url(../fonts/MavenProLight-100.otf)
+}*/
+body, html, *
+{
+	padding: 0px;
+	margin: 0px;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* FONTS */
+
+.f-mpl_1
+{
+	font-family:mpl_u;
+}
+.f-mpl_2
+{
+	font-family:mpl_d;
+}
+.f-mpl_3 /* 1 */
+{
+	font-family:mpl_t;
+}
+.f-mpm /* 1 */
+{
+	font-family:GOTHAM-MEDIUM;
+}
+.f-st /* 1 */
+{
+	font-family:st;
+}
+/* END FONTS */
+
+
+/* -------------------- CONTAINER GENERAL -------------------- */
+
+#container-general
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	text-align: center;
+	padding-bottom: 100px;
+	padding-top: 116px;
+}
+
+#bg-general
+{
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	min-height: 100%;
+	width: 100%;
+
+	background-image: -webkit-repeating-radial-gradient(center center, #D8D8D8, #D8D8D8 1px, transparent 1px, transparent 100%);
+	  background-image: -moz-repeating-radial-gradient(center center, #D8D8D8, #D8D8D8 1px, transparent 1px, transparent 100%);
+	  background-image: -ms-repeating-radial-gradient(center center, #D8D8D8, #D8D8D8 1px, transparent 1px, transparent 100%);
+	  background-image: repeating-radial-gradient(center center, #D8D8D8, #D8D8D8 1px, transparent 1px, transparent 100%);
+	  -webkit-background-size: 50px 50px;
+	  -moz-background-size: 50px 50px;
+	  background-size: 50px 50px;
+}
+
+h1
+{
+	position: relative;
+	z-index: 1;
+	height: 50px;
+	font-size: 42px;
+	font-weight: normal;
+	color: #414447;
+}
+.description
+{
+	margin-top: 5px;
+	position: relative;
+	z-index: 1;
+	color: #a8b1b0;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* -------------------- END CONTAINER GENERAL -------------------- */
+
+
+/* -------------------- LEGAL -------------------- */
+
+#legal
+{
+	max-width: 945px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: auto;
+	margin-top: 46px;
+	position: relative;
+	z-index: 1;
+}
+#nav-profil
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	border-right: 1px solid lightgrey;
+}
+#nav-profil li
+{
+	cursor: pointer;
+	text-align: left;
+	list-style: none;
+	width: 100%;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	text-align: left;
+	padding-left: 18px;
+	position: relative;
+	color: #a8b1b0;
+	font-size: 17px;
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+#nav-profil li svg
+{
+	fill: #a8b1b0;
+	position: absolute;
+  	top: 50%;
+  	left: 0%;
+	-webkit-transform: translate(24px,-50%);
+	-ms-transform: translate(24px,-50%);
+	-o-transform: translate(24px,-50%);
+	transform: translate(24px,-50%);
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+#nav-profil li.active
+{
+	background-color: #7cbdb5;
+}
+#nav-profil li.active
+{
+	color: #FFF;
+}
+#nav-profil li.active svg
+{
+	fill: #FFF;
+}
+
+#container-legal
+{
+	display: inline-block;
+	width: calc(100% - 200px);
+	padding-left: 50px;
+	vertical-align: top;
+}
+#container-legal > div
+{
+	display: none;
+	-webkit-transform: translateY(0%);
+	   -moz-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+	     -o-transform: translateY(0%);
+	        transform: translateY(0%);
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+#container-legal > div.hide
+{
+	opacity: 0;
+	-webkit-transform: translateY(100px);
+	   -moz-transform: translateY(100px);
+	    -ms-transform: translateY(100px);
+	     -o-transform: translateY(100px);
+	        transform: translateY(100px);
+}
+.container-legal_title
+{
+	height: 57px;
+	width: 100%;
+	position: relative;
+	text-align: left;
+}
+.license_table
+{
+	width: 100%;
+	text-align: left;
+	color: #414447;
+	font-size: 14px;
+}
+.license_table .title
+{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+.license_table .standar, .license_table .extended
+{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	text-align: center;
+}
+.container-legal_title .text
+{
+	padding-left: 38px;
+	position: relative;
+	color: #414447;
+	font-size: 17px;
+	display: inline-block;
+
+	position: absolute;
+  	top: 50%;
+  	left: 0px;
+	-webkit-transform: translate(0%,-50%);
+	-ms-transform: translate(0%,-50%);
+	-o-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+}
+.container-legal_title .text .bar
+{
+	position: absolute;
+  	top: 50%;
+  	left: 0%;
+	-webkit-transform: translate(0%,-50%);
+	-ms-transform: translate(0%,-50%);
+	-o-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+
+	width: 23px;
+	height: 2px;
+	background-color: #414447;
+}
+
+.legal_text
+{
+	width: 100%;
+	margin-top: 40px;
+	text-align: left;
+}
+#container-legal .title-1
+{
+	color: #414447;
+	font-size: 18px;
+}
+#container-legal .title-1 a
+{
+	text-decoration: none;
+	cursor: pointer;
+	color: #414447;
+	font-size: 18px;
+}
+#container-legal .title-2
+{
+	color: #414447;
+	font-size: 14px;
+}
+#container-legal .description-1
+{
+	color: #414447;
+	font-size: 14px;
+}
+#container-legal .description-2
+{
+	color: #78807f;
+	font-size: 14px;
+}
+
+/* -------------------- END LEGAL -------------------- */

@@ -1,0 +1,229 @@
+@media screen and (max-width: 690px) {
+	#payment-lightbox
+	{
+		padding-top: 50px;
+		padding-bottom: 100px;
+		-webkit-overflow-scrolling: touch;
+	}
+	.container-payment
+	{
+		width: 95%;
+		margin: auto;
+		position: relative;
+		top: 0%;
+		left: initial;
+		-webkit-transform: translate(0%,0%);
+		-ms-transform: translate(0%,0%);
+		-o-transform: translate(0%,0%);
+		transform: translate(0%,0%);
+	}
+	.container-payment .head-payment.payment-method .previous, 
+	.container-payment .head-payment.payement-method-applepay .previous, 
+	.container-payment .head-payment.payement-method-paypal .previous
+	{
+		left: 25px;
+		padding-left: 0px;
+		font-size: 0px;
+		font-family: none;
+	}
+	.container-payment .head-payment.payment-method .previous svg, 
+	.container-payment .head-payment.payement-method-applepay .previous svg, 
+	.container-payment .head-payment.payement-method-paypal .previous svg
+	{
+		height: 25px;
+		position: relative;
+		top: initial;
+		left: 0px;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	.container-payment .head-payment.choice-payment-method .guest,
+	.container-payment .head-payment.payment-method .guest, 
+	.container-payment .head-payment.download .guest, 
+	.container-payment .head-payment.payement-method-applepay .guest, 
+	.container-payment .head-payment.payement-method-paypal .guest
+	{
+		display: none;
+	}
+	.container-payment .head-payment .title
+	{
+		padding-left: 0px;
+		padding-left: 26px;
+		font-size: 13px;
+	}
+	.container-payment .head-payment.choice-payment-method .title,
+	.container-payment .head-payment.payment-method .title, 
+	.container-payment .head-payment.payment-method-applepay .title,
+	.container-payment .head-payment.payment-method-paypal .title, 
+	.container-payment .head-payment.download .title
+	{
+		padding-left: 0px;
+	}
+	.container-payment .head-payment .guest
+	{
+		right: 26px;
+	}
+	.container-payment .head-payment .guest .check-box
+	{
+		margin-right: 3px;
+	}
+	.content-payment .cart-product
+	{
+		height: 125px;
+	}
+	.content-payment .cart-product .container-license
+	{
+		width: calc(85% - 107px);
+		position: absolute;
+		left: 88px;
+		bottom: 10px;
+	}
+	.content-payment .cart-product .license
+	{
+		font-size: 10px;
+	}
+	.content-payment .cart-product .thumb
+	{
+		width: 85%;
+		height: 95px;
+	}
+	.content-payment .form-payement-card
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content-payment .cart-product .price
+	{
+		top: 43px;
+		-webkit-transform: translateY(0%);
+		   -moz-transform: translateY(0%);
+		    -ms-transform: translateY(0%);
+		     -o-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+
+	.content-payment.login .content .guest
+	{
+		right: 25px;
+		top: 35px;
+	}
+	.content-payment.login .content .guest .check-box
+	{
+		margin-right: 3px;
+	}
+	.content-payment.login .content .guest .name
+	{
+		font-size: 10px;
+	}
+	.content-payment.login .content
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content-payment.login .footer .create-account
+	{
+		width: 140px;
+		font-size: 10px;
+	}
+	.content-payment.login .footer .login
+	{
+		width: 120px;
+	}
+
+	.content-payment.signup .content .guest
+	{
+		right: 25px;
+		top: 35px;
+	}
+	.content-payment.signup .content .guest .check-box
+	{
+		margin-right: 3px;
+	}
+	.content-payment.signup .content .guest .name
+	{
+		font-size: 10px;
+	}
+	.content-payment.signup .content
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content-payment.signup .footer .login
+	{
+		width: 140px;
+		font-size: 9px;
+	}
+	.content-payment.signup .footer .create-account
+	{
+		width: 120px;
+	}
+	.content-payment.signup .footer .create-account .text-create-account
+	{
+		font-size: 10px;
+	}
+
+	.content-payment.choice-payment-method,
+	.container-payment.mode-choice-payment-method > .content
+	{
+		height: 715px;
+	}
+
+	.content-payment.choice-payment-method .method
+	{
+		box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+		height: 205px;
+		display: block;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	.container-payment.mode-payment-method-applepay > .content,
+	.content-payment.payment-method-applepay
+	{
+		height: 317px;
+	}
+	.content-payment.payment-method-applepay .action
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content-payment.payment-method-applepay .action .payment-submit
+	{
+		width: 100%;
+	}
+
+	.container-payment.mode-payment-method-paypal > .content,
+	.content-payment.payment-method-paypal
+	{
+		height: 317px;
+	}
+	.content-payment.payment-method-paypal .action
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content-payment.payment-method-paypal .action .payment-submit
+	{
+		width: 100%;
+	}
+
+}
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+/* iPhone 6 */ 
+
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+/* iPhone 5 */
+
+}
