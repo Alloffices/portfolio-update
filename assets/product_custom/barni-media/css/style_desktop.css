@@ -1567,7 +1567,7 @@ body.block
 
 #section-portfolio
 {
-	padding-top: 100px;
+	padding-top: 10px;
 	width: 100%;
 	position: relative;
 	overflow-x: hidden;
@@ -1621,7 +1621,7 @@ body.block
 
 .section-portfolio_content
 {
-	margin-top: 85px;
+	margin-top: 5px;
 	padding-bottom: 40px;
 }
 .section-portfolio_content_text
